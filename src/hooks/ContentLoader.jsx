@@ -23,7 +23,7 @@ function ContentLoader(){
                  </div>
 
                  {content.length === 0 ? <h3>Loading...</h3> : 
-                  <ContentList content={content} contentType={contentType} />
+                  <ContentList content={content.slice(0,10)} contentType={contentType} />
                  
                  }
             </div>
@@ -33,7 +33,7 @@ function ContentLoader(){
 
 
 function ContentList({content, contentType}){
-
+    
     return (
         <div>
             <h3>{contentType.toUpperCase()}</h3>

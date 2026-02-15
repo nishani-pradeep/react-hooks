@@ -4,14 +4,26 @@ import './index.css';
 import './App.css';
 import CounterApp from './hooks/CounterApp';
 import ContentLoader from './hooks/ContentLoader';
+import ContextExample from './hooks/context/ContextExample';
+
 
 import reportWebVitals from './reportWebVitals';
+import {ThemeProvider} from './hooks/context/ThemeContext';
+import CounterAppReducer from './hooks/context/CounterAppReducer';
+import LocalStorageExample from './hooks/LocalStorageExample';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <CounterApp />
     <ContentLoader />
+    <ThemeProvider>
+      <ContextExample />
+    </ThemeProvider>
+
+    
+    <CounterAppReducer/>
+    <LocalStorageExample/>
   </React.StrictMode>
 );
 
